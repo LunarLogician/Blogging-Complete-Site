@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BlogCard from "./BlogCard";
 import axios from "axios";
+import LoadingPage from "./LoadingPage"; // Import the new loading page
 
 const BlogList = () => {
   const [loading, setLoading] = useState(true);
@@ -21,11 +22,12 @@ const BlogList = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <LoadingPage />; // Show the loading page
   }
 
   if (error) {
-    return <div>{error}</div>;
+    return <LoadingPage />; // Show the loading page
+
   }
 
   return (
@@ -35,7 +37,7 @@ const BlogList = () => {
           key={index}
           id={blog._id} // Pass the blog ID to the BlogCard
           title={blog.title}
-          description={blog.content.slice(0, 200)} // Display the first 150 characters
+          description={blog.content.slice(0, 200)} // Display the first 200 characters
         />
       ))}
     </div>

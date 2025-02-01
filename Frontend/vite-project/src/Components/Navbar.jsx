@@ -38,9 +38,7 @@ const Navbar = () => {
           <a href="/login" className="hover:text-[#D8C4B6] transition-all duration-300">
             Login
           </a>
-          <a href="/contact" className="hover:text-[#D8C4B6] transition-all duration-300">
-            Contact
-          </a>
+         
         </div>
 
         {/* Mobile Menu Button */}
@@ -108,12 +106,7 @@ const Navbar = () => {
           >
             Login
           </a>
-          <a
-            href="/contact"
-            className="block hover:text-[#D8C4B6] text-lg transition-all duration-300"
-          >
-            Contact
-          </a>
+          
         </div>
       )}
     </nav>

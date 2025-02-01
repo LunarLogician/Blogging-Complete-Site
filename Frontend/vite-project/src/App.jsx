@@ -12,6 +12,7 @@ import BlogDetail from './Components/BlogDet';
 import BlogCard from './Components/BlogCard';
 import CreateBlog from './Components/CreateBlog';
 import UpdateCard from './Components/UpdateCard';
+import AboutPage from './Components/About';
 
 function App() {
   const path = window.location.pathname;
@@ -36,6 +37,7 @@ function App() {
           <Route path="/blogs" element={<BlogList />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
           <Route path="/createblog" element={<CreateBlog />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/update/:id" element={<UpdateCard />} />
         </Routes>
         
